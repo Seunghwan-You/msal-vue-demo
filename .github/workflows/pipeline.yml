@@ -1,0 +1,14 @@
+name: stg CI
+
+on:
+  push:
+    branches:
+      - stg
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Show branch
+        run: echo "Running on branch ${{ github.ref }}"
