@@ -13,6 +13,7 @@ async function initialize (client?: NavigationClient) {
   }
   return Auth.initialize(client).then(data => {
     account.value = data
+    initialized.value = true
     return data
   })
 }
